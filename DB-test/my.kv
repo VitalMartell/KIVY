@@ -1,0 +1,19 @@
+<Container>:
+    txt_input : txt_input
+    
+    GridLayout:
+        size: root.width, root.height
+        cols: 1
+        padding: 3
+        spacing: 3
+    
+    
+        AnchorLayout:
+            size_hint_y: 1
+            
+            TextInput:
+                id : txt_input
+                font_size: '30sp'
+                halign: 'left'
+                multiline: True
+                text: root.get_text()

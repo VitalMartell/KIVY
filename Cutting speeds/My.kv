@@ -1,0 +1,41 @@
+<ItemInput@TextInput>
+    input_filter: 'float'
+    multiline: False
+    font_size: '35 sp'
+    text_size: self.size
+    valign: 'middle'
+
+
+
+<Container>:
+    orientation: 'vertical'
+    halingn: 'middle'
+
+    cut_speed: lb1
+    diam: lb2
+    lb_rpm: lb3
+    
+    AnchorLayout:
+    ItemInput:
+        id: lb1
+        hint_text: 'Cutting speed m/min:'
+
+    AnchorLayout:
+    ItemInput:
+        id: lb2
+        hint_text: 'Diameter:'
+
+
+    Button:
+        text: "CALCULATE"
+        font_size: '35 sp'
+        on_press:
+            root.calc()
+
+    Label:
+        id: lb3
+        text: ""
+        text_size: self.size
+        #font_size: '35 sp'
+        halign: 'left'
+        

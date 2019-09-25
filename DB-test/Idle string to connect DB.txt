@@ -1,0 +1,8 @@
+import pyodbc
+
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\user\Desktop\DB-2017.accdb;')
+cursor = conn.cursor()
+cursor.execute('select username from users')
+   
+for row in cursor.fetchall():
+    print (row)

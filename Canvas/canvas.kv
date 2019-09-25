@@ -1,0 +1,18 @@
+<Container>:
+
+    canvas:
+        Color:
+            rgba: 1, .1, .1, .9
+        Line:
+            width: 2.
+            points: root.zero_point()
+        Line:
+            width: 2.
+            ellipse: root.params()
+            #ellipse: (root.center_x-500/2 , root.center_y-300/2 ,500 , 300)
+        Point:
+            points: root.points()
+            pointsize: 3
+    Label:
+        center: root.center
+        text: 'Ellipse'
