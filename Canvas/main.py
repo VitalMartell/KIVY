@@ -16,9 +16,8 @@ class Container(Widget):
         x0 = x0[0]
         y0 = self.zero_point()
         y0 = y0[1]
-        """
-        for i in A(0 , 6 , 2):
-        """
+        #for i in A(0 , 6 , 2):
+
         point_list[0] += x0
         """
         for i in pl(1 , 7 , 2):
