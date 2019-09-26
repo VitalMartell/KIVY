@@ -1,5 +1,6 @@
 from kivy.app import App
 from kivy.uix.widget import Widget
+from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
 from kivy.core.window import Window
 from kivy.config import Config
@@ -13,7 +14,7 @@ Config.write()
 
 
 
-class Container(Widget):
+class Container(BoxLayout):
     def points(self):
         point_list = [0, 0, 0, 50, -10, 60, -50, 60]
         x0 = self.zero_point()
@@ -33,7 +34,7 @@ class Container(Widget):
     def zero_point(self):
         x0 = Window.width/2
         y0 = Window.height/2
-        xy0 = x0, y0, x0 + 0, x0 + 50
+        xy0 = x0, y0, x0 + 0, y0 + 50
         return xy0
 
 
