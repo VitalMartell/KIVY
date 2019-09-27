@@ -1,33 +1,32 @@
 <Container>:
     orientation: 'horizontal'
+    canvas:
+        Color:
+            rgba: 0.1, 0.1, .1, .5
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        Color:
+            rgba: 0.9, .1, .1, .9
+        Point:
+            points: root.points()
+            pointsize: 3
+        Line:
+            width: 2.
+            points: root.points()
     
-    AnchorLayout:
+    FloatLayout:
         size_hint: 0.9, 1
-        canvas:
-            Color:
-                rgba: 0.1, 0.1, .1, .5
-            Rectangle:
-                pos: self.pos
-                size: self.size
-            Color:
-                rgba: 0.9, .1, .1, .9
-            Line:
-                width: 2.
-                points: root.zero_point()
-            Point:
-                points: root.points()
-                pointsize: 3
-                
         Label:
             text: "0"
-                
-
+            pos: 150, 1500
     BoxLayout:
         size_hint: 0.1, 1
         orientation: 'vertical'
         Button:
-            text: '1'
+            text: 'Add point'
             size_hint: 1, 1
+            on_press: self.text = 'pressed'
         Button:
             text: '2'
             size_hint: 1, 1
